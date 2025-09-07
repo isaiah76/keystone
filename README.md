@@ -1,6 +1,7 @@
 # Keystone
 
 This Bash script is designed to automate the maintenance and update tasks for Arch Linux and its derivatives like Manjaro, EndeavourOS, etc.
+> AUR package release soon!
 
 -  Verifies network connectivity and checks for a locked `pacman` database before starting the script.
 -  Can use `reflector` (for Arch) or `pacman-mirrors` (for Manjaro) to find the fastest and most up to date package servers.
