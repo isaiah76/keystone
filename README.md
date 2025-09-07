@@ -2,24 +2,19 @@
 
 This Bash script is designed to automate the maintenance and update tasks for Arch Linux and its derivatives like Manjaro, EndeavourOS, etc.
 
-## Features
-
-- **System Checks**: Verifies network connectivity and checks for a locked `pacman` database before starting the script.
-- **Mirrorlist Update**: Can use `reflector` (for Arch) or `pacman-mirrors` (for Manjaro) to find the fastest and most up to date package servers.
-- **Full System Update**: Does a system update `pacman -Syu` and updates packages from the AUR, Flatpak, etc.
-- **Safe Cleaning**:
-    - Removes orphaned packages that are no longer needed.
-    - Safely cleans the package cache using `paccache`, keeping recent versions for easy downgrades.
-    - Clears out broken or partial package downloads.
-- **System Checks**:
-    - Checks for `.pacnew` files.
-    - Verifies `pacman` database consistency.
-    - Looks for broken symbolic links in system directories.
-    - Checks for failed `systemd` units.
-- **Customizable:**
-    - Logs all operations to `var/log/keystone-YYYY-MM-DD.log`.
-    - Supports a configuration file at `/etc/keystone.conf`
-    - Dry-Run mode to see what would happen without making any changes.
+-  Verifies network connectivity and checks for a locked `pacman` database before starting the script.
+-  Can use `reflector` (for Arch) or `pacman-mirrors` (for Manjaro) to find the fastest and most up to date package servers.
+-  Does a system update `pacman -Syu` and updates packages from the AUR, Flatpak, etc.
+-  Removes orphaned packages that are no longer needed.
+-  Safely cleans the package cache using `paccache`, keeping recent versions for easy downgrades.
+-  Clears out broken or partial package downloads.
+-  Checks for `.pacnew` files.
+-  Verifies `pacman` database consistency.
+-  Looks for broken symbolic links in system directories.
+-  Checks for failed `systemd` units.
+-  Logs all operations to `var/log/keystone-YYYY-MM-DD.log`.
+-  Supports a configuration file at `/etc/keystone.conf`.
+-  Dry-Run mode to see what would happen without making any changes.
 
 ## Installation
 **Manual**
@@ -58,7 +53,8 @@ Defaults can be set at `~/.config/keystone.conf`
   -h, --help            Show this help message and exit.
 ```
 
-## Example Usage
+**Example Usage**
+
 Update system packages interactively and refresh mirrors for the US:
 ```bash 
 sudo keystone -i -c US -m
