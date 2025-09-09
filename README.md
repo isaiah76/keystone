@@ -35,7 +35,9 @@ While the script can run on a base Arch Linux installation, the following packag
 - `AUR Helper`: (Optional) like `paru` or `yay` to enable AUR package updates.
 
 You can install the essential dependencies with:
-`sudo pacman -S reflector pacman-contrib lsof`
+```bash
+sudo pacman -S reflector pacman-contrib lsof
+```
 
 ## Usage
 Run with `sudo`:
